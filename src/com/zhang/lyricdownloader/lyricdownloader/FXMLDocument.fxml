@@ -14,20 +14,20 @@
           <Menu mnemonicParsing="false" text="文件">
             <items>
               <MenuItem mnemonicParsing="false" onAction="#open" text="选择文件" />
-                  <MenuItem mnemonicParsing="false" text="退出" onAction="#exit" />
+                  <MenuItem mnemonicParsing="false" onAction="#exit" text="退出" />
             </items>
           </Menu>
           <Menu mnemonicParsing="false" text="操作">
             <items>
               <MenuItem mnemonicParsing="false" onAction="#downloadLrc" text="下载歌词" />
-                  <MenuItem mnemonicParsing="false" text="转为GBK编码" onAction="#utf8Togbk" />
-                  <MenuItem mnemonicParsing="false" text="转为UTF-8编码" onAction="#gbkToUtf8" />
-                  <MenuItem mnemonicParsing="false" text="删除文件" onAction="#deleteFile" />
+                  <MenuItem mnemonicParsing="false" onAction="#utf8Togbk" text="转为GBK编码" />
+                  <MenuItem mnemonicParsing="false" onAction="#gbkToUtf8" text="转为UTF-8编码" />
+                  <MenuItem mnemonicParsing="false" onAction="#deleteFile" text="删除文件" />
             </items>
           </Menu>
           <Menu mnemonicParsing="false" text="帮助">
             <items>
-              <MenuItem mnemonicParsing="false" text="关于程序" onAction="#about" />
+              <MenuItem mnemonicParsing="false" onAction="#about" text="关于程序" />
             </items>
           </Menu>
         </menus>
@@ -52,7 +52,7 @@
       </ToolBar>
       <ImageView fx:id="imageView" fitHeight="106.0" fitWidth="132.0" layoutX="524.0" layoutY="39.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../resource/pic/album.png" />
+            <Image url="@../../../../resource/pic/album.png" />
          </image>
       </ImageView>
       <Label layoutX="435.0" layoutY="85.0" text="封面图片：" />
