@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="372.0" prefWidth="670.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.zhang.lyricdownloader.lyricdownloader.FXMLDocumentController">
+   <children>
+      <MenuBar prefHeight="25.0" prefWidth="670.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="文件">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#open" text="选择文件" />
+                  <MenuItem mnemonicParsing="false" text="退出" onAction="#exit" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="操作">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#downloadLrc" text="下载歌词" />
+                  <MenuItem mnemonicParsing="false" text="转为GBK编码" onAction="#utf8Togbk" />
+                  <MenuItem mnemonicParsing="false" text="转为UTF-8编码" onAction="#gbkToUtf8" />
+                  <MenuItem mnemonicParsing="false" text="删除文件" onAction="#deleteFile" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="帮助">
+            <items>
+              <MenuItem mnemonicParsing="false" text="关于程序" onAction="#about" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <ScrollPane layoutY="24.0" prefHeight="312.0" prefWidth="413.0">
+         <content>
+            <TableView fx:id="table" prefHeight="310.0" prefWidth="411.0">
+              <columns>
+                <TableColumn fx:id="ckbox" prefWidth="36.0" text="勾选" />
+                <TableColumn fx:id="fileName" prefWidth="114.0" text="文件名" />
+                  <TableColumn fx:id="filePath" prefWidth="260.0" text="路径" />
+              </columns>
+            </TableView>
+         </content>
+      </ScrollPane>
+      <ToolBar layoutX="2.0" layoutY="337.0" prefHeight="34.0" prefWidth="413.0">
+        <items>
+          <Button mnemonicParsing="false" onAction="#checkAll" text="全选" />
+            <Button mnemonicParsing="false" onAction="#clearCheck" prefHeight="3.0" prefWidth="52.0" text="全不选" />
+            <ProgressBar fx:id="progressBar" prefHeight="18.0" prefWidth="299.0" progress="0.0" />
+        </items>
+      </ToolBar>
+      <ImageView fx:id="imageView" fitHeight="106.0" fitWidth="132.0" layoutX="524.0" layoutY="39.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../resource/pic/album.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="435.0" layoutY="85.0" text="封面图片：" />
+      <Label layoutX="461.0" layoutY="186.0" text="标题：" />
+      <Label layoutX="449.0" layoutY="221.0" text="艺术家：" />
+      <Label layoutX="436.0" layoutY="287.0" text="发行年份：" />
+      <Label layoutX="459.0" layoutY="255.0" text="专辑：" />
+      <TextField fx:id="title" disable="true" layoutX="497.0" layoutY="182.0" />
+      <TextField fx:id="artist" disable="true" layoutX="497.0" layoutY="217.0" />
+      <TextField fx:id="album" disable="true" layoutX="497.0" layoutY="251.0" />
+      <TextField fx:id="year" disable="true" layoutX="497.0" layoutY="283.0" />
+   </children>
+</AnchorPane>
